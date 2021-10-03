@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Antd model definitions for .NET .</Description>
+    <Version>0.0.1-alpha</Version>
+    <Authors>zmjack</Authors>
+    <Company>nstandard.net</Company>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/zmjack/AntdSharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zmjack/AntdSharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Antd</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NStandard" Version="0.8.21" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
