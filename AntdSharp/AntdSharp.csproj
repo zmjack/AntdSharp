@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Antd model definitions for .NET .</Description>
     <Version>0.0.1-alpha</Version>
@@ -12,11 +12,24 @@
     <RepositoryUrl>https://github.com/zmjack/AntdSharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Antd</PackageTags>
+    <DebugType>portable</DebugType>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+    <DefineConstants>$(DefineConstants)TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants)TRACE</DefineConstants>
+    <Optimize>True</Optimize>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NStandard" Version="0.8.21" />
+    <PackageReference Include="NStandard" Version="0.25.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Text.Json" Version="6.0.0" />
   </ItemGroup>
 
 </Project>
